@@ -1,0 +1,60 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 300;
+    background-color: rgb(52, 112, 199);
+    display: grid;
+    grid: 
+        "header header header header" auto
+        ". list active ." auto/1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
+}
+
+.title {
+    grid-area: header;
+    text-align: center;
+    opacity: 0.2;
+    margin: -0.3em 0 0.5em;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.lists-container {
+    grid-area: list;
+    
+}
+
+.lists-container h2 {
+    color: white;
+}
+
+.lists-container ul {
+    color: rgba(250, 250, 250, 0.8)
+}
+
+.todo-container {
+    grid-area: active;
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+.todo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+}
+
+.active {
+    color: white;
+    font-weight: 900;
+    font-size: 1.2rem;
+}

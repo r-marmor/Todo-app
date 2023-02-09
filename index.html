@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>My pretty to-do app</title>
+</head>
+<body>
+    <h1 class="title">My pretty to-do app</h1>
+
+    <div class="lists-container">
+        <h2>My lists</h2>
+            <ul class="lists" data-lists-container></ul>
+            <form action="" data-new-list-form>
+            <input 
+                type="text" 
+                class="list-input"
+                data-new-list-input
+                placeholder="enter new list name"
+                />
+            <button class="btn create">add list</button>
+        </form>
+    </div>
+
+    <div class="todo-container" data-todo-container>
+        <div class="todo-header">
+           <h1 class="list-title" data-list-title>List 1 (active list)</h1>
+           <div class="task-counter" data-task-counter>0 task remaining</div>
+        </div>
+
+        <div class="todo-body" data-todo-body>
+            <div class="tasks" data-tasks></div>  
+        </div>
+          
+        <div class="new-task-creator">
+            <form action="" data-new-task-form>
+                <input 
+                    type="text" 
+                    class="task-input new"
+                    data-new-task-input
+                    placeholder="add task"
+                    />
+                <button class="btn create">add task</button>
+            </form>
+        </div>
+            <div class="delete-stuff">
+                <button class="btn delete" data-clear-complete-task>Clear completed task(s)</button>
+                <button class="btn delete" data-delete-list-btn>Delete list</button> 
+            </div>    
+    </div>
+    
+   <template id="task-template">
+        <div class="task">
+            <input type="checkbox" />
+            <label><span></span>
+            </label>
+        </div>
+   </template>
+</body>
+</html>
